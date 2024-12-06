@@ -26,7 +26,6 @@ export const MiniDrawer = ({ children, user, history, setMessage, setIdConver, n
   const nuevaConversacion = async () => {
     setMessage([])
     setIdConver(0)
-    // setnuevaConversa(1)
   }
 
   const toggleUserMenu = () => {
@@ -92,7 +91,7 @@ export const MiniDrawer = ({ children, user, history, setMessage, setIdConver, n
           </div>
 
           <div className='text-black mt-auto flex items-center flex-col gap-y-10 justify-center gap-x-5 rounded-md  px-4 py-2  hover:cursor-pointer relative'>
-            <div className='rounded-md py-2 px-4 flex w-full justify-center gap-x-10 items-center mt-auto hover:bg-indigo-400 transition-colors duration-100' onClick={toggleUserMenu}>
+            <div className='rounded-md py-2 px-4 flex w-full justify-start gap-x-5 items-center mt-auto hover:bg-indigo-400 transition-colors duration-100' onClick={toggleUserMenu}>
               <div className='relative inline-flex items-center justify-center w-10 h-10 overflow-hidden bg-indigo-500 rounded-full'>
                 <span className='font-medium text-white'>{nameUser.charAt(0)}</span>
               </div>

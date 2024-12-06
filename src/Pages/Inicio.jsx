@@ -29,8 +29,8 @@ export const Inicio = () => {
     setValue('message', '')
 
     const { error, message: mensajeEnviar, result } = await EnviarMensaje(data, user, idConver)
-
     if (!error && result?.mensajeAsistente) {
+      setIdConver(result.conversacionId)
       setMessage((prevMessages) => [
         ...prevMessages,
         { message: result.mensajeAsistente, isOwn: false, isInitialLoad: false }
