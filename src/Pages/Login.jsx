@@ -48,7 +48,7 @@ export const Login = () => {
               placeholder='Nombre Usuario'
               {...register('nombreUsuario', { required: 'Nombre de usuario es obligatorio' })}
             />
-            <p className='text-indigo-500 text-xs font-semibold ml-1 h-2 w-full'>
+            <p className='text-red-500 text-xs font-semibold ml-1 h-2 w-full mt-1'>
               {errors.nombreUsuario ? errors.nombreUsuario.message : ''}
             </p>
           </div>
@@ -61,7 +61,7 @@ export const Login = () => {
               placeholder='Contraseña'
               {...register('passwordUsuario', { required: 'La contraseña es obligatoria' })}
             />
-            <p className='text-indigo-500 text-xs font-semibold ml-1 h-2 w-full'>
+            <p className='text-red-500 text-xs font-semibold ml-1 h-2 w-full mt-1'>
               {errors.passwordUsuario ? errors.passwordUsuario.message : ''}
             </p>
           </div>
