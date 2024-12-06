@@ -32,8 +32,8 @@ export const Login = () => {
   }, [])
 
   return (
-    <div className='h-screen w-full bg-slate-100 flex justify-center items-center'>
-      <div className='bg-white flex flex-col w-full max-w-md p-10 rounded-lg shadow-xl justify-center items-center'>
+    <div className='h-screen w-full md:bg-slate-100 flex justify-center items-center'>
+      <div className='bg-white flex flex-col w-full max-w-md p-10 rounded-lg shadow-2xl justify-center items-center'>
         <div>
           <h2 className='text-4xl font-bold mb-4'> Inicio de sesión </h2>
         </div>

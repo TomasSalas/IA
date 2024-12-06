@@ -7,7 +7,7 @@ export const ChatMessage = ({ message, isOwn, isInitialLoad }) => {
   useEffect(() => {
     if (!isOwn) {
       if (!isInitialLoad) {
-        typeWriterEffect(message, setTypedMessage, 50)
+        typeWriterEffect(message, setTypedMessage, 20)
       } else {
         setTypedMessage(message)
       }

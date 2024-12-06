@@ -63,7 +63,7 @@ export const Inicio = () => {
 
   return (
     <MiniDrawer user={user || ''} history={history} setMessage={setMessage} setIdConver={setIdConver} nameUser={nameUser}>
-      <div className='h-full w-full flex flex-col'>
+      <div className='h-[calc(100vh-4rem)] w-full flex flex-col'>
         <div className='flex-1 overflow-y-auto p-4 space-y-4'>
           {message.map((item, index) => (
             <ChatMessage
@@ -99,7 +99,7 @@ export const Inicio = () => {
             </div>
           </form>
           <div className='flex justify-center w-full'>
-            <h2 className='text-sm text-gray-500 ml-1'> El asistente puede cometer errores. Considera verificar la información importante </h2>
+            <h2 className='text-xs md:text-md text-gray-500 ml-1'> El asistente puede cometer errores. Considera verificar la información importante </h2>
           </div>
         </div>
       </div>
