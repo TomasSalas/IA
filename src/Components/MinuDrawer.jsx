@@ -146,7 +146,7 @@ export const MiniDrawer = ({ children, user, history, setMessage, setIdConver, n
           </div>
         </header>
 
-        <main className='overflow-auto h-[calc(100vh-4rem)]'>{children}</main>
+        <main className='h-[calc(100svh-4rem)]'>{children}</main>
       </div>
 
       {/* Drawer derecho */}
