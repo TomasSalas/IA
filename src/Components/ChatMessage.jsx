@@ -19,7 +19,13 @@ export const ChatMessage = ({ message, isOwn, isInitialLoad }) => {
   return (
     <div className={`flex ${isOwn ? 'justify-end' : 'justify-start'}`}>
       <div className={`flex ${isOwn ? 'flex-row-reverse' : 'flex-row'} items-end max-w-[70%]`}>
-        <div className={`rounded-2xl px-4 py-2 shadow-sm ${isOwn ? 'bg-indigo-500 text-white border-gray-200' : 'bg-white border border-gray-200'}`}>
+        <div
+          className={`rounded-2xl px-4 py-2 shadow-sm 
+            ${isOwn
+              ? 'bg-indigo-500 text-white border-gray-600 dark:border-gray-800'
+              : 'bg-white dark:bg-gray-800 dark:text-gray-100 border border-gray-200 dark:border-gray-700'
+            }`}
+        >
           <p className='text-base leading-relaxed whitespace-pre-line'>
             <MathJaxContext>
               <MathJax dynamic>{typedMessage}</MathJax>
@@ -36,7 +42,16 @@ function typeWriterEffect (fullText, setTypedMessage, speed) {
 
   function type () {
     if (index <= fullText.length) {
-      setTypedMessage(fullText.slice(0, index))
+      setTypedMessage((prev) => {
+        const updatedMessage = fullText.slice(0, index)
+        const messageContainer = document.getElementById('message-container')
+        if (messageContainer) {
+          window.requestAnimationFrame(() => {
+            messageContainer.scrollTop = messageContainer.scrollHeight
+          })
+        }
+        return updatedMessage
+      })
       index++
       setTimeout(type, speed)
     }
