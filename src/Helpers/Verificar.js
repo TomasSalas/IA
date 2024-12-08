@@ -9,7 +9,7 @@ export const Verificar = () => {
 
   useEffect(() => {
     if (decodedToken) {
-      setUser(decodedToken.nameid)
+      setUser(parseInt(decodedToken.nameid))
       setNameUser(decodedToken.unique_name)
     }
   }, [decodedToken])

@@ -1,1 +1,1 @@
-export const RutaBase = 'https://into-mysql-chapel-defense.trycloudflare.com/'
+export const RutaBase = 'https://incorrect-charlotte-earn-url.trycloudflare.com/'
